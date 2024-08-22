@@ -1,0 +1,12 @@
+package com.example.demo.dto;
+
+public class UserDTO {
+	private String userId;
+	private String userPw;
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+}

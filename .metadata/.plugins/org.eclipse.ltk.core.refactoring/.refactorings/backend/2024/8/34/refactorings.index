@@ -1,0 +1,13 @@
+1724049099493	Delete element
+1724112568865	Move compilation unit
+1724112577308	Rename type 'UserVO'
+1724112864134	Rename package 'com.example.demo.Controller'
+1724112883998	Rename package 'com.example.demo.DTO'
+1724112891124	Rename package 'com.example.demo.Service'
+1724112961263	Rename type 'LoginController'
+1724112968728	Rename type 'LoginService'
+1724113337038	Delete element
+1724114028018	Delete element
+1724115784541	Encapsulate field 'userId, ...'
+1724115790762	Encapsulate field 'userPw, ...'
+1724127560978	Delete element

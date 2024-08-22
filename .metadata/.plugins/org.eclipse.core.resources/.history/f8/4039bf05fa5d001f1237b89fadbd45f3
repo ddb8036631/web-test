@@ -1,0 +1,13 @@
+package com.example.demo.Controller;
+
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api")
+public class LoginController {
+	
+	@PostMapping("/login")
+	public void login(@RequestBody UserVO userVO) {
+		System.out.println("ID : " + userVO.getId() + ", pw : " + userVO.getPassword());
+	}
+}

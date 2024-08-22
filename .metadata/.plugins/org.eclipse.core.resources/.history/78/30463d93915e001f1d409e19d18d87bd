@@ -1,0 +1,9 @@
+package com.example.demo.config;
+
+public class MapperConfig {
+
+	@Bean
+	public ModelMapper modelMapper() {
+		return new ModelMapper();
+	}
+}

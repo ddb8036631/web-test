@@ -1,0 +1,12 @@
+package com.example.demo.Controller;
+
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestController("/api")
+public class LoginController {
+	@PostMapping("/login")
+	public void login() {
+		System.out.println("login clicked.");
+	}
+}

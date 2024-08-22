@@ -1,0 +1,20 @@
+package com.example.demo.controller;
+
+import org.springframework.web.bind.annotation.*;
+
+import com.example.demo.dto.UserDTO;
+import com.example.demo.service.UserService;
+
+@RestController
+@RequestMapping("/api")
+public class UserController {
+	
+//	@Autowired
+	UserServiceImpl userService;
+	
+	@PostMapping("/login")
+	public void login(@RequestBody UserDTO userDTO) {
+		System.out.println("userId : " + userDTO.getUserId() + ", userPw : " + userDTO.getUserPw());
+		userService.findAllUsers();
+	}
+}

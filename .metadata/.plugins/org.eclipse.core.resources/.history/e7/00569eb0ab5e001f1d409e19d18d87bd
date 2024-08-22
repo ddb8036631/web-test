@@ -1,0 +1,31 @@
+package com.example.demo.service;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.dto.UserDTO;
+import com.example.demo.entity.UserEntity;
+import com.example.demo.repository.UserRepository;
+
+@Service
+public class UserServiceImpl implements UserService {
+	
+	@Autowired
+	UserRepository userRepository;
+	
+	@Autowired
+	ModelMapper modelMapper;
+    
+	public void findAllUsers() {
+         List<UserEntity> userEntityList = userRepository.findAllUsers();
+         for (UserEntity userEntity : userEntityList) {
+        	 UserDTO userDTO = modelMapper.map(userEntity, UserDTO.class);
+        	 System.out.println("userId : " + userDTO.getUserId() + ", userPw : " + userDTO.getUserPw());
+         }
+         
+         return;
+    }
+}

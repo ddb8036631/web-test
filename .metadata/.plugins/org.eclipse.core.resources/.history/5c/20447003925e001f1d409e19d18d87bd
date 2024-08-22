@@ -1,0 +1,26 @@
+package com.example.demo.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.dto.UserDTO;
+import com.example.demo.entity.UserEntity;
+import com.example.demo.repository.UserRepository;
+
+public class UserService {
+
+	@Autowired
+	UserRepository userRepository;
+    
+	public void findAllUsers() {
+		
+         List<UserEntity> userEntityList = userRepository.findAllUsers();
+         for (UserEntity userEntity : userEntityList) {
+        	 UserDTO userDTO = mapperUtil.convertToDTO(userEntity, UserDTO.class)
+         }
+         return;
+    }
+	
+}

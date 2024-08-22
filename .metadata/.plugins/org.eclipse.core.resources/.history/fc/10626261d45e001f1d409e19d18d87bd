@@ -1,0 +1,26 @@
+package com.example.demo.controller;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import com.example.demo.dto.UserDTO;
+import com.example.demo.service.UserService;
+
+@RestController
+@RequestMapping("/api")
+public class UserController {
+	
+	@Autowired
+	private UserService userService;
+	
+	@PostMapping("/login")
+//	public void login(@RequestBody UserDTO userDTO) {
+	public void login(@RequestBody Object obj) {
+//		System.out.println("userId : " + userDTO.getUserId() + ", userPw : " + userDTO.getUserPw());
+		System.out.println("Object : ", obj.toString());
+		
+		userService.findAllUsers();
+	}
+}
